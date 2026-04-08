@@ -17,8 +17,8 @@ def build_dataframe():
 def build_express_figure(df=None):
     if df is None:
         df = build_dataframe()
-    fig = px.line(df, x="Date", y="Company_A", title="Company A Price")
-    fig.update_layout(xaxis_title="Date", yaxis_title="Price")
+    fig = px.line(df, x="Date", y="Company_A", title="Company_1 stock price")
+    fig.update_layout(xaxis_title="Date", yaxis_title="Company_A")
     return fig
 
 
@@ -35,7 +35,7 @@ def build_graph_objects_figure(df=None):
             )
         ]
     )
-    fig.update_layout(title="Company A Price", xaxis_title="Date", yaxis_title="Price")
+    fig.update_layout(title="Company_1 stock price", xaxis_title="Date", yaxis_title="Company_A")
     return fig
 
 

@@ -17,10 +17,10 @@ def build_plot():
     left_axis.plot(x_axis, left_data, color="black")
     right_axis.plot(x_axis, right_data, color="red")
 
-    left_axis.set_title("Two Y-Axes Plot")
-    left_axis.set_xlabel("X Axis")
-    left_axis.set_ylabel("Left Y Axis")
-    right_axis.set_ylabel("Right Y Axis")
+    left_axis.set_title("Twin axes")
+    left_axis.set_xlabel("x - axis")
+    left_axis.set_ylabel("Big")
+    right_axis.set_ylabel("Small")
     return fig, left_axis, right_axis
 
 

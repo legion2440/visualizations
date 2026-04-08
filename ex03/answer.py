@@ -1,15 +1,13 @@
 from pathlib import Path
 
 import matplotlib
-import numpy as np
-
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 
 def build_plot():
-    x_values = np.arange(1, 9)
-    y_values = np.array([1, 3, 2, 5, 4, 7, 6, 8])
+    x_values = [1, 4, 5, 6, 7]
+    y_values = [2, 6, 3, 6, 3]
 
     fig, ax = plt.subplots(figsize=(8, 5))
     ax.plot(
@@ -23,9 +21,9 @@ def build_plot():
         markerfacecolor="blue",
         markeredgecolor="blue",
     )
-    ax.set_title("Styled Line Plot")
-    ax.set_xlabel("X Axis")
-    ax.set_ylabel("Y Axis")
+    ax.set_title("Display marker")
+    ax.set_xlabel("x - axis")
+    ax.set_ylabel("y - axis")
     ax.set_xlim([1, 8])
     ax.set_ylim([1, 8])
     return fig, ax

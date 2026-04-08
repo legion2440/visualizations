@@ -9,16 +9,19 @@ import pandas as pd
 def build_plot():
     df = pd.DataFrame(
         {
-            "Math": [72, 75, 78, 80],
-            "Science": [68, 73, 77, 82],
-        },
-        index=["Class A", "Class B", "Class C", "Class D"],
+            "name": ["christopher", "marion", "maria", "mia", "clement", "randy", "remi"],
+            "age": [70, 30, 22, 19, 45, 33, 20],
+            "gender": ["M", "F", "F", "F", "M", "M", "M"],
+            "state": ["california", "dc", "california", "dc", "california", "new york", "porto"],
+            "num_children": [2, 0, 0, 3, 8, 1, 4],
+            "num_pets": [5, 1, 0, 5, 2, 2, 3],
+        }
     )
-    ax = df.plot(kind="bar", figsize=(8, 5))
-    ax.set_title("Scores by Class")
-    ax.set_xlabel("Class")
-    ax.set_ylabel("Score")
-    ax.legend(title="Subject")
+    ax = df.plot.bar(x="name", y="age", figsize=(8, 5), rot=90)
+    ax.set_title("Age per name")
+    ax.set_xlabel("name")
+    ax.set_ylabel("")
+    ax.legend()
     return ax.figure, ax
 
 

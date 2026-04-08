@@ -9,14 +9,18 @@ import pandas as pd
 def build_plot():
     df = pd.DataFrame(
         {
-            "Age": [18, 22, 27, 31, 36, 42, 47, 53, 58],
-            "Children": [0, 0, 1, 1, 2, 2, 3, 4, 5],
+            "name": ["christopher", "marion", "maria", "mia", "clement", "randy", "remi"],
+            "age": [70, 30, 22, 19, 45, 33, 20],
+            "gender": ["M", "F", "F", "F", "M", "M", "M"],
+            "state": ["california", "dc", "california", "dc", "california", "new york", "porto"],
+            "num_children": [4, 2, 1, 0, 3, 1, 0],
+            "num_pets": [5, 1, 0, 2, 2, 2, 3],
         }
     )
-    ax = df.plot.scatter(x="Age", y="Children", figsize=(8, 5), color="tab:blue")
-    ax.set_title("Age vs Number of Children")
-    ax.set_xlabel("Age")
-    ax.set_ylabel("Children")
+    ax = df.plot.scatter(x="age", y="num_children", figsize=(8, 5), color="red")
+    ax.set_title("Scatter plot: Number of children and age")
+    ax.set_xlabel("age")
+    ax.set_ylabel("num_children")
     return ax.figure, ax
 
 
