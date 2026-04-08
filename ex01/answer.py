@@ -13,8 +13,8 @@ def build_plot():
             "age": [70, 30, 22, 19, 45, 33, 20],
             "gender": ["M", "F", "F", "F", "M", "M", "M"],
             "state": ["california", "dc", "california", "dc", "california", "new york", "porto"],
-            "num_children": [2, 0, 0, 3, 8, 1, 4],
-            "num_pets": [5, 1, 0, 5, 2, 2, 3],
+            "num_children": [4, 2, 1, 0, 3, 1, 0],
+            "num_pets": [5, 1, 0, 2, 2, 2, 3],
         }
     )
     ax = df.plot.bar(x="name", y="age", figsize=(8, 5), rot=90)
